@@ -1,0 +1,21 @@
+plugins {
+    id 'java'
+    id 'idea'
+}
+
+group 'com.cn.ridge'
+version '1.0-SNAPSHOT'
+
+repositories {
+    maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' }
+    maven { url "https://repo.spring.io/milestone" }
+    mavenCentral()
+}
+
+dependencies {
+    compile group: 'org.springframework.boot',name: 'spring-boot-starter-quartz',version: '2.1.0.RELEASE'
+    compile project(":jar-holder")
+    compile project(":beans")
+    compile project(":es")
+    compile project(":feign")
+}
